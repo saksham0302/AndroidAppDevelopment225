@@ -16,7 +16,7 @@
         android:theme="@style/Theme.CSE225Notes"
         tools:targetApi="31">
         <activity
-            android:name=".unit_4.CustomViewTextViewExample"
+            android:name=".unit_5.SharedPreferencesDemo"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -25,9 +25,11 @@
             </intent-filter>
         </activity>
         <activity
+            android:name=".unit_4.CustomViewTextViewExample"
+            android:exported="false" />
+        <activity
             android:name=".unit_4.CustomViewEditTextExample"
             android:exported="false" />
-
         <activity
             android:name=".unit_4.CustomViewExample"
             android:exported="false" />
