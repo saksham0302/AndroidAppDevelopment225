@@ -29,6 +29,9 @@ class SharedPreferencesDemo : AppCompatActivity() {
         saveBtn = findViewById(R.id.save)
 
         sharedPreferences = getSharedPreferences(File, Context.MODE_PRIVATE)
+
+        name.setText(sharedPreferences.getString(Name, ""))
+        email.setText(sharedPreferences.getString(Email, ""))
     }
 
     fun save(v: View) {
@@ -39,5 +42,18 @@ class SharedPreferencesDemo : AppCompatActivity() {
         edit.putString(Name, n)
         edit.putString(Email, e)
         edit.apply()
+    }
+
+    fun clear(v: View) {
+
+        name.setText("")
+        email.setText("")
+    }
+
+    fun fetch(v: View) {
+
+        sharedPreferences = getSharedPreferences(File, Context.MODE_PRIVATE)
+        name.setText(sharedPreferences.getString(Name, ""))
+        email.setText(sharedPreferences.getString(Email, ""))
     }
 }

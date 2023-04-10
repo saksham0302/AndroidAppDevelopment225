@@ -8,7 +8,7 @@
     tools:context=".unit_5.SharedPreferencesDemo">
 
     <EditText
-        android:id="@+id/email"
+        android:id="@+id/name"
         android:layout_marginTop="40dp"
         android:layout_marginHorizontal="30dp"
         android:hint="Name"
@@ -17,7 +17,7 @@
         android:layout_height="wrap_content" />
 
     <EditText
-        android:id="@+id/name"
+        android:id="@+id/email"
         android:layout_marginTop="15dp"
         android:layout_marginHorizontal="30dp"
         android:textSize="20dp"
@@ -25,14 +25,40 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
-    <Button
-        android:id="@+id/save"
-        android:layout_marginTop="20dp"
-        android:layout_gravity="center"
-        android:textSize="20dp"
-        android:text="Save"
-        android:layout_width="wrap_content"
+    <RelativeLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:onClick="save" />
+        android:layout_marginTop="20dp">
+
+        <Button
+            android:id="@+id/clear"
+            android:textSize="20dp"
+            android:text="Clear"
+            android:layout_marginLeft="20dp"
+            android:layout_alignParentLeft="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="clear" />
+
+        <Button
+            android:id="@+id/save"
+            android:textSize="20dp"
+            android:text="Save"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="save" />
+
+        <Button
+            android:id="@+id/fetch"
+            android:textSize="20dp"
+            android:text="Fetch"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="fetch" />
+
+    </RelativeLayout>
 
 </LinearLayout>
