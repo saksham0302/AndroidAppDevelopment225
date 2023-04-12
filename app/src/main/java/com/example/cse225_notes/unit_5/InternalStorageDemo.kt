@@ -17,8 +17,7 @@ class InternalStorageDemo : AppCompatActivity() {
     lateinit var showText: TextView
     lateinit var data: String
     val fileName = "MyData.txt"
-
-
+    
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_internal_storage_demo)
