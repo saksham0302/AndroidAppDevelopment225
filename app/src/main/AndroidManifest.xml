@@ -4,7 +4,6 @@
 
     <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
-
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
@@ -19,7 +18,7 @@
         android:theme="@style/Theme.CSE225Notes"
         tools:targetApi="31">
         <activity
-            android:name=".unit_5.ExternalStorageDemo"
+            android:name=".unit_5.ReadExternalStorageDemo"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -27,6 +26,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".unit_5.WriteExternalStorageDemo"
+            android:exported="false" />
         <activity
             android:name=".unit_5.InternalStorageDemo"
             android:exported="false" />

@@ -1,6 +1,7 @@
 package com.example.cse225_notes.unit_5
 
 import android.Manifest
+import android.content.Intent
 import android.content.pm.PackageManager
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -15,11 +16,12 @@ import java.io.FileNotFoundException
 import java.io.FileOutputStream
 import java.io.IOException
 
-class ExternalStorageDemo : AppCompatActivity() {
+class WriteExternalStorageDemo : AppCompatActivity() {
 
     lateinit var uName: EditText
     lateinit var pin: EditText
-    lateinit var export: Button
+    lateinit var write: Button
+    lateinit var read: Button
 
     lateinit var fstream: FileOutputStream
     private val fileName = "SampleFile.txt"
@@ -33,13 +35,14 @@ class ExternalStorageDemo : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_external_storage_demo)
+        setContentView(R.layout.activity_write_external_storage_demo)
 
         uName = findViewById(R.id.uname)
         pin = findViewById(R.id.pin)
-        export = findViewById(R.id.export)
+        write = findViewById(R.id.write)
+        read = findViewById(R.id.read)
 
-        export.setOnClickListener {
+        write.setOnClickListener {
             val userName = """
                 ${uName.text}
             """.trimIndent()
@@ -81,6 +84,11 @@ class ExternalStorageDemo : AppCompatActivity() {
                 e.printStackTrace()
             }
 
+        }
+
+        read.setOnClickListener {
+            val intent = Intent(this, ReadExternalStorageDemo::class.java)
+            startActivity(intent)
         }
 
     }
