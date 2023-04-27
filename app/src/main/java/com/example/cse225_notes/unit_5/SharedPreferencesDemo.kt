@@ -30,8 +30,8 @@ class SharedPreferencesDemo : AppCompatActivity() {
 
         sharedPreferences = getSharedPreferences(File, Context.MODE_PRIVATE)
 
-        name.setText(sharedPreferences.getString(Name, ""))
-        email.setText(sharedPreferences.getString(Email, ""))
+        //name.setText(sharedPreferences.getString(Name, ""))
+        //email.setText(sharedPreferences.getString(Email, ""))
     }
 
     fun save(v: View) {
